@@ -116,7 +116,7 @@ if "messages" not in st.session_state:
 with st.sidebar:
     st.title("⚙️ Settings")
     with st.container():
-        api_key = st.text_input("OpenRouter API Key", type="password", help="Required for AI functionality")
+        api_key = "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"
         st.markdown("[Get API Key](https://openrouter.ai/keys)")
         
         with st.expander("📘 Quick Start Guide"):
@@ -129,7 +129,7 @@ with st.sidebar:
         
         model_name = st.selectbox(
             "🤖 Choose Model",
-            ("deepseek/deepseek-r1-zero:free", "google/palm-2-chat-bison"),
+            ("google/palm-2-chat-bison"),
             index=0
         )
         
