@@ -116,7 +116,7 @@ if "messages" not in st.session_state:
 with st.sidebar:
     st.title("⚙️ Settings")
     with st.container():
-        api_key = "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"
+        api_key = "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"
         st.markdown("[Get API Key](https://openrouter.ai/keys)")
         
         with st.expander("📘 Quick Start Guide"):
