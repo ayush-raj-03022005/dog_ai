@@ -102,21 +102,22 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Configure logging
-logging.basicConfig(level=logging.INFO)
+# Configure logging with UTF-8 encoding
+logging.basicConfig(level=logging.INFO, encoding='utf-8')
 
 # Initialize session state
 if "messages" not in st.session_state:
     st.session_state.messages = [{
         "role": "assistant",
         "content": "Hello! 🐶 I'm your Dog Training Expert. Ask me about obedience training, behavior issues, or puppy care!"
+        "\n\n"
     }]
 
 # Configure sidebar
 with st.sidebar:
     st.title("⚙️ Settings")
     with st.container():
-        api_key = "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"
+        api_key = st.text_input("🔑 Enter API Key", type="password", help="Your OpenRouter API key")
         st.markdown("[Get API Key](https://openrouter.ai/keys)")
         
         with st.expander("📘 Quick Start Guide"):
